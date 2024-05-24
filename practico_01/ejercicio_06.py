@@ -75,11 +75,11 @@ if __name__ == "__main__":
 
 def numeros_al_final_recursivo(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """CHALLENGE OPCIONAL - Re-escribir de forma recursiva."""
-    if all(type(i) != str for i in lista):
+    if all(type(i) is not str for i in lista):
         return lista
 
     a, *b = lista
-    if type(a) != str:
+    if type(a) is not str:
         b.append(a)
         return numeros_al_final_recursivo(b)
     return [a] + numeros_al_final_recursivo(b)

@@ -25,7 +25,6 @@ def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
     return tuple(cadena_final)
 
 
-
 # NO MODIFICAR - INICIO
 respuesta = (
     ("ventana", 100.48),
