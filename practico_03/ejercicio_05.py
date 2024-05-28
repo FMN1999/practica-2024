@@ -11,7 +11,25 @@ class Auto:
     
     Referencia: https://docs.python.org/3/library/functions.html#property"""
 
-    # Completar
+    def __init__(self, nombre: str, precio: float) -> None:
+        self._nombre = nombre
+        self._precio = precio
+
+    @property
+    def nombre(self) -> str:
+        return self._nombre.capitalize()
+
+    @nombre.setter
+    def nombre(self, value: str) -> None:
+        self._nombre = value
+
+    @property
+    def precio(self) -> float:
+        return round(self._precio, 2)
+
+    @precio.setter
+    def precio(self, value: float) -> None:
+        self._precio = value
 
 
 # NO MODIFICAR - INICIO
@@ -21,7 +39,6 @@ assert auto.nombre == "Ford"
 assert auto.precio == 12_875.46
 auto.precio = 13_874.349
 assert auto.precio == 13_874.35
-
 try:
     auto.nombre = "Chevrolet"
     assert False
@@ -35,11 +52,28 @@ except AttributeError:
 
 from dataclasses import dataclass
 
+
 @dataclass
 class Auto:
     """Re-Escribir utilizando DataClasses"""
+    nombre: str
+    precio: int
 
-    # Completar
+    @property
+    def nombre(self):
+        return self._nombre.capitalize()
+
+    @nombre.setter
+    def nombre(self, value: str) -> None:
+        self._nombre = value
+
+    @property
+    def precio(self):
+        return round(self._precio, 2)
+
+    @precio.setter
+    def precio(self, value: float) -> None:
+        self._precio = value
 
 
 # NO MODIFICAR - INICIO
