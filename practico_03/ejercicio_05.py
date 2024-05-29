@@ -19,10 +19,6 @@ class Auto:
     def nombre(self) -> str:
         return self._nombre.capitalize()
 
-    @nombre.setter
-    def nombre(self, value: str) -> None:
-        self._nombre = value
-
     @property
     def precio(self) -> float:
         return round(self._precio, 2)
@@ -56,16 +52,12 @@ from dataclasses import dataclass
 @dataclass
 class Auto:
     """Re-Escribir utilizando DataClasses"""
-    nombre: str
-    precio: int
+    _nombre: str
+    _precio: int
 
     @property
     def nombre(self):
         return self._nombre.capitalize()
-
-    @nombre.setter
-    def nombre(self, value: str) -> None:
-        self._nombre = value
 
     @property
     def precio(self):
