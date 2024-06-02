@@ -24,7 +24,7 @@ def crear_tabla():
 
 
 def borrar_tabla():
-    """Implementar la funcion borrar_tabla, que borra la tabla creada 
+    """Implementar la funcion borrar_tabla, que borra la tabla creada
     anteriormente."""
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
